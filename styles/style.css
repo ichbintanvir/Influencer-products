@@ -7,6 +7,21 @@ body {
 }
 
 /*-------------
+animation
+-----------*/
+@keyframes slideRight {
+    from {
+        transform: translateX(300%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(-300%);
+    }
+}
+
+/*-------------
 header
 -----------*/
 .section-1 {
@@ -52,9 +67,11 @@ main {
     margin-bottom: 200px;
 }
 
-/* .left-section {
-    width: 100%;
-} */
+.left-section {
+    /* width: 100%; */
+    animation-name: slideLeft;
+    animation-duration: 3s;
+}
 
 .left-section-title {
     font-size: 32px;
@@ -85,6 +102,8 @@ main {
     width: 440px;
     height: 414px;
     background-image: url("../images/Circle\ design.svg");
+    animation-name: slideRight;
+    animation-duration: 2s;
 }
 
 .ad {
@@ -181,6 +200,13 @@ section-3
 .left {
     width: 404px;
     height: 270px;
+    animation-name: slideLeft;
+    animation-duration: 3s;
+}
+
+.right {
+    animation-name: slideRight;
+    animation-duration: 3s;
 }
 
 .right .left-section-info p {
